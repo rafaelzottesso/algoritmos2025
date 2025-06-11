@@ -1,4 +1,7 @@
-num = float(input("Número: "))
+num = int(input("Número: "))
 
-# R$100.90
-print(f"R${num:.04f}")
+x = int(input("Valor inicial: "))
+y = int(input("Valor final: "))
+
+for i in range(x, y+1):
+    print(f"{num} X {i} = {num*i}")

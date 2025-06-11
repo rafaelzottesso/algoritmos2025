@@ -1,45 +1,11 @@
 # Biblioteca pra rodar comandos no terminal
 import os
 
-# Enquanto o tamanho do nome do email for menor que 6, o usuário deverá informar novamente
-tamanho = 0
-while(tamanho < 6):
-    usuario = input("Informe seu usuário de email: ")
-    tamanho = len(usuario)
-    if(tamanho <= 5):
-        print("Informe um email maior que 5 caracteres.")
-
-# Apresenta o nome do email
-print(f"\nSeu nome de usuário: {usuario}")
-
-print("\nDefina seu provedor de emails...")
-print("1 - @ifpr.edu.br")
-print("2 - @gmail.com")
-print("3 - @hotmail.com")
-print("4 - outro")
-opcao = int(input("OPÇÃO: "))
-
-# Verifica a opção do usuário para completar o usuário de email com o provedor
-if(opcao == 1):
-    email = usuario + "@ifpr.edu.br"
-elif(opcao == 2):
-    email = usuario + "@gmail.com"
-elif(opcao == 3):
-    email = usuario + "@hotmail.com"
-else:
-    # Se o provedor não tiver "@" E não tiver ".com", informe novamente
-    provedor = ""
-    while(not("@" in provedor) and not(".com" in provedor)):
-        provedor = input("Digite seu provedor de email com @: ")
-
-    email = usuario + provedor
+email = "rafael.zottesso@ifpr.edu.br"
 
 print(f"Seu email é: {email}")
 
 # Verifica com o usuário se o email está correto
-correto = input("Seu email está correto? (S) Sim ou (N) Não: ")
-if(correto != "S" and correto != "s"):
-    exit() # Finaliza o programa
 
 msg_commit = input("\nMensagem do commit: ")
 while( len(msg_commit) <= 10 ):
