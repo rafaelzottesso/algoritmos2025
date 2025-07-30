@@ -31,5 +31,5 @@ c = f"git commit -m \"{msg_commit}\"  "
 os.system(c)
 
 # Enviar para os servidores do GitHub
-c = "git push"
+c = f"git push"
 os.system(c)
