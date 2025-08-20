@@ -23,3 +23,7 @@ if(tipo == True):
     print(f"{num1} é par")
 else:
     print(f"{num1} é ímpar")
+
+# Mostrar na tela todos os números primos
+# do 1 ao 100
+    

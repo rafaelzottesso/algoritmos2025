@@ -20,7 +20,7 @@ def inputInt(msg:str):
     except:
         print("Int inválido!")
         # Funções recursivas fazem uma chamada para ela mesmo
-        x = inputInt()
+        x = inputInt(f"{msg}")
     return x
 
 # Função sem parâmetro que retorna um valor float
@@ -67,6 +67,23 @@ def raiz(valor:float,grau:int):
 def ePar(valor:int):
     resto = valor % 2
     if(resto == 0):
+        return True
+    else:
+        return False
+
+# Crie uma função chamada ehPrimo que recebe
+# um número qualquer por parâmetro e returna
+# True se o nº for primo ou False se não
+"""
+Números primos: 1, 2, 3, 5, 7, 11, 13, 
+"""
+def ehPrimo(x):
+    cont = 0
+    for i in range(1, x+1):
+        if(x % i == 0):
+            cont += 1
+    
+    if(cont == 2):
         return True
     else:
         return False
